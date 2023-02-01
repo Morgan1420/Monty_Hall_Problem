@@ -26,22 +26,22 @@ void simulacioMHP(int numIntents, bool cambiarPorta, int portaInicial)
         }
 
         // revelem si la porta que han triat es la correcrte
-        if((cambiarPorta == 'Y' or cambiarPorta == 'y') and portaInicial != portaCorrecte)
+        if(cambiarPorta and portaInicial != portaCorrecte)
         {
-            printf("!!!PORTA CORRECTE!!!\n");
+            printf("0");
             contadorCorrectes++;
         }
-        else if ((cambiarPorta == 'N' or cambiarPorta == 'n') and portaInicial == portaCorrecte)
+        else if (!cambiarPorta and portaInicial == portaCorrecte)
         {
-            printf("!!!PORTA CORRECTE!!!\n");
+            printf("0");
             contadorCorrectes++;
         }
         else
-            printf("!!!PORTA INCORRECTE!!!\n");
+            printf("X");
 
 
-
-        printf("Porta correcte = %d, intent numero: %d\n\n", portaCorrecte, i);
+        if(i % 20 == 19)
+            printf("\n");
     
     
     
@@ -50,6 +50,7 @@ void simulacioMHP(int numIntents, bool cambiarPorta, int portaInicial)
     
     }
     
+    // mostrem la informació resultant al 
     float percentantgeEncerts = float(contadorCorrectes) / numIntents;
     printf("Numero d'encerts = %d\n Numero d'intents = %d\n Percentatge d'encerts = %.2f \n", contadorCorrectes, numIntents, percentantgeEncerts);
 }
