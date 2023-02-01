@@ -4,7 +4,13 @@
 
 int main()
 {
-    simulacioMHP(100, true, 1);
+
+    
+
+    simulacioMHP(1000, true, 1);
+
+
+    
 
     
     

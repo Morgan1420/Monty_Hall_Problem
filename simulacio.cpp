@@ -38,19 +38,10 @@ void simulacioMHP(int numIntents, bool cambiarPorta, int portaInicial)
         }
         else
             printf("X");
-
-
-        if(i % 20 == 19)
-            printf("\n");
-    
-    
-    
-    
-    
     
     }
     
     // mostrem la informació resultant al 
     float percentantgeEncerts = float(contadorCorrectes) / numIntents;
-    printf("Numero d'encerts = %d\n Numero d'intents = %d\n Percentatge d'encerts = %.2f \n", contadorCorrectes, numIntents, percentantgeEncerts);
+    printf("\n\nNumber of times you got the car: %d\nNumber of tries: %d\nWin rate: %.2f \n", contadorCorrectes, numIntents, percentantgeEncerts);
 }
