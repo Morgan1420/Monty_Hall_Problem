@@ -11,7 +11,7 @@ void SinglePlayer()
 
      // demanem al usuari que seleccioni una porta de l'1 al 3
      do{
-         printf("Selecciona una porta (1, 2 o 3): ");
+         printf("Select a door (1, 2 o 3): ");
          std::cin >> numeroPorta;
      }while(numeroPorta < 1 or 3 < numeroPorta);
      
@@ -27,28 +27,30 @@ void SinglePlayer()
          
      }
 
-     printf("La porta numero %d està buida\n", portaIncorrecte);
+     printf("Door number %d is empty\n", portaIncorrecte);
 
      // demanem al usuari si vol cambiar de porta
      char cambiarPorta;
-     do{
-         printf("Voleu cambiar de porta? Y/n: ");
-         std::cin >> cambiarPorta;
-         printf("\n");
-     }while(cambiarPorta != 'y' and cambiarPorta != 'n' and cambiarPorta != 'Y' and cambiarPorta != 'N');
+     
+     printf("Would you like to change doors? (Y/-): ");
+     std::cin >> cambiarPorta;
 
 
      // revelem si la porta que han triat es la correcrte
      if((cambiarPorta == 'Y' or cambiarPorta == 'y') and numeroPorta != portaCorrecte)
-         printf("!!!PORTA CORRECTE!!!\n");
-     else if ((cambiarPorta == 'N' or cambiarPorta == 'n') and numeroPorta == portaCorrecte)
-
-         printf("!!!PORTA CORRECTE!!!\n");     
+         printf("\n!!!CORRECT DOOR - YOU GET THE CAR!!!\n");
+     else if (numeroPorta == portaCorrecte)
+         printf("\n!!!CORRECT DOOR - YOU GET THE CAR!!!\n");     
      else
-         printf("!!!PORTA INCORRECTE!!!\n");
+         printf("\n!!!WRONG DOOR - YOU GET A GOAT!!!\n");
         
 
-    printf("Porta seleccionada: %d\nPorta correcte: %d\nCanvi de Porta: %c\n", numeroPorta, portaCorrecte, cambiarPorta);
+    printf("\n+-+-+-+-+-+-+-+-+ RESULTS +-+-+-+-+-+-+-+-+\nSelected door: %d\nCorrect door: %d\n", numeroPorta, portaCorrecte);
+
+    if(cambiarPorta == 'Y' or cambiarPorta == 'y')
+        printf("Door change: true\n");
+    else
+        printf("Door change: false\n");
     
     
 }

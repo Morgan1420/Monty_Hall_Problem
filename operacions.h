@@ -1,1 +1,2 @@
-void simulacioMHP(int numIntents, bool cambiarPorta, int portaInicial);
+void simulacioMHP();
+void SinglePlayer();
