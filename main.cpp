@@ -20,9 +20,8 @@ int main()
         "Hello and welcome to the Monty Hall Problem Simulator, here is what you can do:" << std::endl <<
         "1) What is The Monty Hall Problem?" << std::endl <<
         "2) Play the MHP" << std::endl <<
-        "3) Simulate the MHP (doesn't keep results stats)" << std::endl <<
-        "4) See results stats" << std::endl << 
-        "5) Exit" << std::endl <<
+        "3) Simulate the MHP" << std::endl <<
+        "4) Exit" << std::endl <<
         "What will you do? ";
         
         // we get the user choice
@@ -60,10 +59,6 @@ int main()
             std::cout << std::endl << std::endl << std::endl;
             break;
         case 4:
-            printf("\nnot available at the moment\n");
-            std::cout << std::endl << std::endl << std::endl;
-            break;
-        case 5:
             printf("\nThanks for playing :)\n");
             gameOver = true;
             break;
