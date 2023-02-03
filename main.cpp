@@ -1,3 +1,4 @@
+// g++ -o main main.cpp simulacio.cpp single_player.cpp && ./main 
 #include <iostream>
 #include "operacions.h"
 
@@ -42,7 +43,10 @@ int main()
         switch (choice)
         {
         case 1:
-            printf("\nnot available at the moment\n");
+            std::cout << "\nSuppose you're on a game show, and you're given the choice of three doors: Behind one door is a car; behind the others, goats." << 
+            std::endl << "You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat." <<
+            std::endl << "He then says to you, \"Do you want to pick door No. 2?\" Is it to your advantage to switch your choice?";
+            
             std::cout << std::endl << std::endl << std::endl;
             break;
         case 2:
